@@ -1,0 +1,40 @@
+@use "../utils" as *;
+@use "../globals" as *;
+// Author Component
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%;
+    &__img {
+        border-radius: 50%;
+        border: 2px #fff solid;
+        img {
+            width: 80px;
+        }
+    }
+    &__name {
+        margin-left: 4%;
+    }
+}
+
+// Heading Component
+.heading {
+    color: var(--color-white);
+    margin: 4% 0 4% 0;
+    font-size: 1.1em;
+}
+
+.heading-white {
+    color: var(--color-dark-grey);
+}
+
+// Detail Component
+.detail {
+    &--light-grey {
+        color: var(--color-light-grey);
+    }
+    &--grey {
+        color: var(--color-grey);
+    }
+}

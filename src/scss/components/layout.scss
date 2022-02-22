@@ -1,0 +1,68 @@
+@use "../utils" as *;
+@use "../globals" as *;
+// Testimonial Section
+.testimonial {
+    padding: 0 5% 3% 5%;
+    &__container {
+        display: grid;
+        grid-template-columns: 95%;
+        grid-template-rows: auto;
+        grid-template-areas: "violet" "grey" "white" "d-grey" "l-white";
+        grid-gap: 1%;
+        .testimonial__item {
+            border-radius: 10px;
+            padding: 5%;
+            &--violet {
+                grid-area: violet;
+                background-color: var(--color-violet);
+                color: var(--color-white);
+            }
+            &--grey {
+                grid-area: grey;
+                background-color: var(--color-grey);
+                color: var(--color-white);
+            }
+            &--white {
+                grid-area: white;
+                background-color: var(--color-white)
+            }
+            &--dark-grey {
+                grid-area: d-grey;
+                background-color: var(--color-dark-grey);
+                color: var(--color-white);
+            }
+            &--white-long {
+                grid-area: l-white;
+                background-color: var(--color-white);
+            }
+        }
+        @include minWidth(769px) {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            grid-template-areas: "violet violet" "grey white" "d-grey l-white";
+            grid-gap: 2%;
+        }
+        @include minWidth(1025px) {
+            grid-template-columns: 21% 21% 21% 21%;
+            grid-template-rows: auto;
+            grid-template-areas: "violet violet grey l-white" " white d-grey d-grey l-white";
+            grid-gap: 4%;
+        }
+    }
+    @include minWidth(1025px) {
+        padding: 0 5% 3% 7%;
+    }
+}
+
+// Footer Section
+.footer {
+    // margin: rem(70);
+    margin: rem(150) 0 0 0;
+    text-align: center;
+    @include minWidth(769px) {
+        margin: rem(100) 0 0 0;
+    }
+    @include minWidth(1025px) {
+        margin: 1.875rem;
+    }
+}
